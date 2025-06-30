@@ -11,20 +11,28 @@
 
   <script>
     const songs = [
-      "https://rupa31331.github.io/music/relexing.mp3",
+      "https://rupa31331.github.io/music/rellexing.mp3",
       "https://rupa31331.github.io/music/silent.mp3",
       "https://rupa31331.github.io/music/unbreakable.mp3"
     ];
 
     let currentIndex = 0;
+    const player = document.getElementById("player");
 
     function playNext() {
-      const player = document.getElementById("player");
       player.src = songs[currentIndex];
       player.load();
       player.play();
       currentIndex = (currentIndex + 1) % songs.length;
     }
+
+    // Jab song khatam ho, tab automatically next song play ho
+    player.addEventListener('ended', playNext);
+
+    // Auto start first song
+    window.onload = () => {
+      playNext();
+    };
   </script>
 </body>
 </html>
