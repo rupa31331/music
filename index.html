@@ -11,7 +11,7 @@
 
   <script>
     const songs = [
-      "https://rupa31331.github.io/music/rellexing.mp3",
+      "https://rupa31331.github.io/music/relaxing.mp3",
       "https://rupa31331.github.io/music/silent.mp3",
       "https://rupa31331.github.io/music/unbreakable.mp3"
     ];
@@ -20,9 +20,9 @@
 
     function playNext() {
       const player = document.getElementById("player");
-      player.src = songs[currentIndex];         // set next song
-      player.play();                            // play song
-      currentIndex = (currentIndex + 1) % songs.length;  // go to next song for next click
+      player.src = songs[currentIndex];
+      player.play();
+      currentIndex = (currentIndex + 1) % songs.length;
     }
   </script>
 </body>
