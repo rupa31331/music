@@ -3,27 +3,25 @@
 <head>
   <title>Relaxing Songs</title>
 </head>
-<body style="text-align:center; padding-top: 50px; font-family:sans-serif">
-  <h2>🎵 Relaxing Songs</h2>
-  <button onclick="playNext()">▶️ Play Next Song</button>
-  <br><br>
-  <audio id="player" controls></audio>
+<body style="font-family:sans-serif; text-align: center; padding: 30px">
+  <h1>🎶 Relaxing Songs</h1>
 
-  <script>
-    const songs = [
-      "https://rupa31331.github.io/music/relaxing.mp3",
-      "https://rupa31331.github.io/music/silent.mp3",
-      "https://rupa31331.github.io/music/unbreakable.mp3"
-    ];
+  <h3>1. Peaceful Piano</h3>
+  <audio controls>
+    <source src="https://rupa31331.github.io/music/relaxing.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-    let currentIndex = 0;
+  <h3>2. Silent Night</h3>
+  <audio controls>
+    <source src="https://rupa31331.github.io/music/silent.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-    function playNext() {
-      const player = document.getElementById("player");
-      player.src = songs[currentIndex];
-      player.play();
-      currentIndex = (currentIndex + 1) % songs.length;
-    }
-  </script>
+  <h3>3. Unbreakable Vibes</h3>
+  <audio controls>
+    <source src="https://rupa31331.github.io/music/unbreakable.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
