@@ -7,7 +7,7 @@
   <h2>🎵 Relaxing Songs</h2>
   <button onclick="playNext()">▶️ Play Next Song</button>
   <br><br>
-  <audio id="player" controls autoplay></audio>
+  <audio id="player" controls></audio>
 
   <script>
     const songs = [
@@ -17,22 +17,13 @@
     ];
 
     let currentIndex = 0;
-    const player = document.getElementById("player");
 
     function playNext() {
-      player.src = songs[currentIndex];
-      player.load();
-      player.play();
-      currentIndex = (currentIndex + 1) % songs.length;
+      const player = document.getElementById("player");
+      player.src = songs[currentIndex];         // set next song
+      player.play();                            // play song
+      currentIndex = (currentIndex + 1) % songs.length;  // go to next song for next click
     }
-
-    // Jab song khatam ho, tab automatically next song play ho
-    player.addEventListener('ended', playNext);
-
-    // Auto start first song
-    window.onload = () => {
-      playNext();
-    };
   </script>
 </body>
 </html>
